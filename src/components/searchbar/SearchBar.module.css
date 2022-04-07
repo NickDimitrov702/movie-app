@@ -1,0 +1,35 @@
+
+.searchBarWrapper {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    max-width: 100%;
+    background-color: rgba(128, 128, 128, 0.195);
+}
+
+.inputWrapper {
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo {
+   float: right;
+   flex-grow: 1;
+   text-decoration: none;
+   font-size: 23px;
+   margin-left:10px;
+}
+
+.searchInput {
+    width: auto;
+    height: 30px;
+    /* border: none; */
+}
+
+#searchButton {
+    width: auto;
+    height: 35px;
+    margin-left: 10px;
+}

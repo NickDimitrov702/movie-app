@@ -1,11 +1,16 @@
+import { Link } from 'react-router-dom'
+import style from './SearchBar.module.css'
 
 function SearchBar() {
 
     return (
-        <div>
-            <h1>My Movie Collection</h1>
-            <input type='text' placeholder='Search by movie title'></input>
-            <button>Search</button>
+        <div className={style.searchBarWrapper}>
+            <Link className={style.logo} to='/'>My Movie Collection</Link>
+            <div className={style.inputWrapper}>
+                <input className={style.searchInput} type='text' placeholder='Search by movie title'></input>
+                <button id={style.searchButton}>Search</button>
+            </div>
+            
         </div>
 
 

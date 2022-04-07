@@ -1,11 +1,13 @@
+import MovieContainer from "../movies/MovieContainer"
 import SearchBar from "../searchbar/SearchBar"
 
 
 function SearchPage() {
 
     return(
-        <div href=''>
+        <div>
             <SearchBar></SearchBar>
+            <MovieContainer></MovieContainer>
         </div>
     )
 }

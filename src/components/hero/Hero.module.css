@@ -1,0 +1,29 @@
+.heroWrapper {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.headerWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin-right: 300px;
+}
+
+.navBar {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.navBar li {
+    margin: 10px;
+
+}
+
+.navBar li a {
+    text-decoration: none;
+}

@@ -1,10 +1,12 @@
 import MovieContainer from "../movies/MovieContainer"
+import SearchBar from "../searchbar/SearchBar"
 
 
 function MovieDetails() {
 
     return (
         <div href='/movie-details'>
+            <SearchBar></SearchBar>
             <MovieContainer></MovieContainer>
             <div className='your-review-wrapper'>
                 <h2>Your Review</h2>

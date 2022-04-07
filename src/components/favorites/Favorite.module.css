@@ -1,0 +1,12 @@
+.favoritesWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.movieImage{
+    width: 200px;
+    height: 250px;
+    background-color: grey;
+}
