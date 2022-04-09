@@ -9,7 +9,7 @@ function Favorites() {
                 <div className='movie-template'>
                     <div className={style.movieImage}>
 
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>

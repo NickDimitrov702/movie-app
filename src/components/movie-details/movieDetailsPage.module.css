@@ -1,0 +1,21 @@
+
+
+.movieDetailsPageWrapper {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ratingsWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 20px auto auto 100px;
+}
+
+.textArea {
+    height: 150px;
+    margin-bottom: 20px;
+}

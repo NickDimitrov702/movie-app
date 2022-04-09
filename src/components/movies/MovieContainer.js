@@ -1,26 +1,32 @@
+import style from './movieDetails.module.css';
 
+function MovieContainer({
+    id,
+    name,
+    image
+}) {
 
-function MovieContainer() {
-
+    console.log(image)
     return (
-        <div className='movie-container-wrapper'>
-            <div className='movie-image-wrapper'>
-                <img alt='no image'></img>
+        <div className={style.movieDetailsWrapper}>
+            <div className={style.movieImageWrapper}>
+                <img src={image} alt='no image'/>
             </div>
-            <div className='movie-details'>
-                <h2>Movie title</h2>
-                <ul>
-                    <li className='movie-agenres'></li>
-                    <li className='movie-duration'></li>
+            <div className={style.movieDetails}>
+                <h2>{name}</h2>
+                <ul className={style.movieSpecs}>
+                    <li className='movie-genres'>Action</li>
+                    <li className='movie-duration'>160</li>
                 </ul>
-                <p>Movie resume Movie resume Movie resume Movie resume Movie resume Movie resume
+                <p className={style.movieReview}>Movie resume Movie resume Movie resume Movie resume Movie resume Movie resume
                     Movie resume Movie resume Movie resume Movie resume Movie resume Movie resume
                     Movie resume Movie resume Movie resume Movie resume Movie resume Movie resume
                     Movie resume Movie resume Movie resume Movie resume Movie resume Movie resume
                 </p>
-                <a>Visit official website</a>
+                <a href='https://www.tvmaze.com/api' target='_blank' className={style.movieDetailsLink}>Visit official website</a>
+                <button id={style.button}>Add to favorites/remove from favorits</button>
             </div>
-            <button>Add to favorites/remove from favorits</button>
+
         </div>
     )
 }

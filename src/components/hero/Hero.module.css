@@ -4,6 +4,7 @@
     margin: auto;
     height: 300px;
     border: 1px solid black;
+    align-items: center;
 }
 
 .headerWrapper {
@@ -11,6 +12,8 @@
     flex-direction: column;
     max-width: 450px;
     margin-right: 300px;
+    margin-left: 50px;
+    align-items: flex-start;
 }
 
 .navBar {
