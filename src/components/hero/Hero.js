@@ -13,11 +13,11 @@ function Hero() {
             </div>
             <div className={style.navBarWrapper}>
                 <ul className={style.navBar}>
-                    {/* replace with react-router-links */}
+                    
                     <li><Link to='/'>Home page</Link></li>
                     <li><Link to='/search'>Search page</Link></li>
                     <li><Link to='/movie-details'>Movie details</Link></li>
-                    {/* replace with react-router-links */}
+                    
                 </ul>
             </div>
         </div>

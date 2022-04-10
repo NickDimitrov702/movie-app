@@ -7,16 +7,18 @@ import HomePage from './components/homePage/HomePage';
 import SearchPage from './components/searchPage/SearchPage';
 import MovieDetails from './components/movie-details/MovieDetailsPage';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom'
-
+import { DataProvider } from './components/contextProvider/contextProvider'
 function App() {
 
   return (
     <div className="App">
+      <DataProvider>
         <Routes>
-          <Route exact path='/' element={<HomePage/>} />
-          <Route path='search' element={<SearchPage/>} />
-          <Route path='/movie-details' element={<MovieDetails/>} />
+          <Route exact path='/' element={<HomePage />} />
+          <Route path='search' element={<SearchPage />} />
+          <Route path='/movie-details' element={<MovieDetails />} />
         </Routes>
+      </DataProvider>
     </div>
   );
 }

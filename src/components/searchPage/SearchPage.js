@@ -2,66 +2,59 @@ import MovieContainer from "../movies/MovieContainer"
 import SearchBar from "../searchbar/SearchBar"
 import style from './searchPage.module.css'
 import { useEffect, useState } from "react"
+import { useDataFetch } from '../contextProvider/contextProvider'
 
 function SearchPage() {
 
-    let baseUrl = 'https://api.tvmaze.com/search/shows?q=';
-    const [endpoints, setEndPoint] = useState();
     let endpoint;
+    const [searchData1,setSearchData] = useState([])
     let searchReasult;
-    const [data, setData] = useState([])
-    const [updateBaseUrl, setBaseUrl] = useState();
-    const [searchInput, setSearchInput] = useState();
+    const [baseData, setData] = useState([])
+    const [isLoaded,setIsloaded] = useState(true);
 
-    const searchItems = (searchValue) => {
-        setSearchInput(searchValue)
-    }
+    const { data } = useDataFetch([])
+    const { searchData } = useDataFetch([])
 
-    function onClick(e) {
+
+    async function onClick(e) {
         e.preventDefault()
         endpoint = document.getElementById('searchInput').value
         searchReasult = `https://api.tvmaze.com/search/shows?q=${endpoint}`
         console.log(endpoint)
-        localStorage.setItem(baseUrl, endpoint)
+      
         try {
-            fetch(searchReasult)
+            await fetch(searchReasult)
                 .then(data => data.json())
-                .then(data => setData(data))
+                .then(data => setSearchData(data))
+            
         } catch {
             console.log('dwadawdawdawd')
         }
-
-
-
-        console.log(data)
+        setIsloaded(false)
+      
+        
     }
 
     useEffect(() => {
-
+        
         setData(data)
-        try {
-            fetch(baseUrl)
-                .then(data => data.json())
-                .then(data => setData(data))
-        } catch {
-            console.log('dwadawdawdawd')
-        }
-    }, [])
+        
+    }, [data])
 
-
-
+    console.log(data)
     // console.log(data.map(items => console.log(items.show)))
-
     return (
         <div className={style.searchPageWrapper}>
             <SearchBar></SearchBar>
             <div className={style.inputWrapper}>
-                <input className={style.searchInput} id='searchInput' type='text' placeholder='Search by movie title' onChange={(e) => searchItems(e.target.value)}  ></input>
+                <input className={style.searchInput} id='searchInput' type='text' placeholder='Search by movie title'></input>
                 <button onClick={onClick} className={style.searchButton}>Search</button>
             </div>
-            {data.map(items =>
-                <MovieContainer id={items.show.id} name={items.show.name} image={items.show.image} {...items} />
-            )}
+            {!isLoaded ? <div>{searchData1.map(items => <MovieContainer id={items.show.id} name={items.show.name} image={items.show.image} links={items.show._links} {...items.show}/>)} </div> 
+            : <div>{baseData.map(items =>
+                <MovieContainer id={items.show.id} name={items.show.name} image={items.show.image} links={items.show._links} {...items.show} />
+            )}</div>}
+            
 
         </div>
     )
