@@ -2,10 +2,10 @@
 .searchBarWrapper {
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 70px;
     align-items: center;
     max-width: 100%;
-    background-color: rgba(128, 128, 128, 0.195);
+    background-color: rgba(27, 24, 24, 0.978);
 }
 
 .inputWrapper {
@@ -20,16 +20,21 @@
    text-decoration: none;
    font-size: 23px;
    margin-left:10px;
+   color: rgb(238, 234, 234);
+   font-weight: 600;
 }
 
 .searchInput {
     width: auto;
     height: 30px;
     /* border: none; */
+    border-radius: 10px 0px 0px 10px;
 }
 
 #searchButton {
     width: auto;
     height: 35px;
     margin-left: 10px;
+    font-size: 15px;
+    border-radius: 0px 10px 10px 0px;
 }

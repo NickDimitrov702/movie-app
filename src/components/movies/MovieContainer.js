@@ -10,12 +10,14 @@ function MovieContainer({
     genres,
     links,
     summary,
-    premiered
+    premiered,
+    url
 }) {
 
     let [images, setImage] = useState('')
     let [summarys, setSummary] = useState('')
     let [gener, setGener] = useState('')
+    let [specificUrl,setSpecificUrl] = useState('')
 
     console.log(links)
 
@@ -31,6 +33,10 @@ function MovieContainer({
 
         if (genres) {
             setGener(genres)
+        }
+
+        if (url) {
+            setSpecificUrl(url)
         }
 
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import style from './SearchBar.module.css'
 
 function SearchBar() {
+    
 
     return (
         <div className={style.searchBarWrapper}>
@@ -10,7 +11,7 @@ function SearchBar() {
                 <input className={style.searchInput} type='text' placeholder='Search by movie title'></input>
                 <button id={style.searchButton}>Search</button>
             </div>
-            
+
         </div>
 
 

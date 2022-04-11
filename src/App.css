@@ -3,3 +3,11 @@
   margin: auto;
 }
 
+.appBackground {
+  position: absolute;
+  z-index: -1;
+  max-width: 1400px;
+}
+
+
+

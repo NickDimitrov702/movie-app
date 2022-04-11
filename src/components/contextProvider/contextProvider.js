@@ -30,12 +30,12 @@ export function DataProvider({ children }) {
         
         fetchData()
 
-    }, [])
+    }, [loading])
 
-    function getAllData() {
+    // function getAllData() {
 
-        return data
-    }
+    //     return data
+    // }
 
     async function searchData(e) {
 
@@ -58,10 +58,7 @@ export function DataProvider({ children }) {
     }
 
 
-
-
     const value = {
-        getAllData,
         searchData,
         data
     }

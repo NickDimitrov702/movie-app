@@ -1,11 +1,13 @@
 body {
- /* max-width: 1400px;
- margin: auto; */
+ max-width: 1400px;
+ margin: auto;
 }
 
 html {
-  max-width: 1100%;
+  width: auto;
   margin: auto;
+  background-image: url('../src/resources/appBackground.jpg');
+  
 }
 
 code {

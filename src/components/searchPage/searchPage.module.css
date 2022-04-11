@@ -1,7 +1,7 @@
 .searchPageWrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid  black;
+ 
 }
 
 .inputWrapper {
@@ -14,11 +14,14 @@
 
 .searchInput {
     width: auto;
-    height: 30px;
+    height: 28px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .searchButton {
     width: auto;
     height: 35px;
     margin-left: 10px;
+    font-size: 15px;
+    border-radius: 0px 10px 10px 0px;
 }
